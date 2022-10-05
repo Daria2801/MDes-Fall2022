@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style media="screen">
-    main {
-      height: 100vh;
-    }
-  </style>
+    <style media="screen">
+      main {
+        height: 100vh;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
 
-  <title>Buttons doing things</title>
+    <title>Buttons doing things</title>
   </head>
 
-<body>
-  <header>
+  <body>
+    <main class="page">
+      <header class="header">
+        <img src="images/flower1.jpeg" role="button" id="button1" />
+        <img src="images/flower2.jpeg" role="button" id="button2" />
+        <img src="images/flower3.jpeg" role="button" id="button3" />
+        <img src="images/flower4.jpeg" role="button" id="button4" />
+      </header>
+      <div><img id="image" src="images/flower1.jpeg" /></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <header>
     <button role="button" id="colorChange">Click me</button>
     <button role="button" id="addText">Don't click me</button>
     <button role="button" id="imageBtn">Image!</button>
   </header>
-  <main id="mainSection"></main>
-
-
-  <script src="script.js"></script>
   
-</body>
-</html>
+  <main id="mainSection"></main> -->

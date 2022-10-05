@@ -1,36 +1,51 @@
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
+const button3 = document.getElementById("button3");
+const button4 = document.getElementById("button4");
+const image = document.getElementById("image");
 
-let colorBtn = document.getElementById("colorChange")
-const mainSct = document.getElementById("mainSection")
-const textBtn = document.getElementById("addText")
-const imgBtn = document.getElementById("imageBtn")
+const showImage = (clickEvent) => {
+  const newSrc = clickEvent.target.src;
+  image.src = newSrc;
+};
 
-console.log(colorBtn)
+button1.addEventListener("click", showImage);
+button2.addEventListener("click", showImage);
+button3.addEventListener("click", showImage);
+button4.addEventListener("click", showImage);
 
-const addSomeText = () => {
-  const someText = "here is a bit of text."
-  const htmlElem = document.createElement("h1")
-  htmlElem.innerText = someText
+// let colorBtn = document.getElementById("colorChange")
+// const mainSct = document.getElementById("mainSection")
+// const textBtn = document.getElementById("addText")
+// const imgBtn = document.getElementById("imageBtn")
 
-  mainSct.appendChild(htmlElem)
-}
+// console.log(colorBtn)
 
-const addImage = () => {
-  const imgURL = "https://upload.wikimedia.org/wikipedia/commons/4/4a/100x100_logo.png"
-  const imgElem = document.createElement("img")
-  imgElem.src = imgURL
-  imgElem.alt = "circle logo"
+// const addSomeText = () => {
+//   const someText = "here is a bit of text."
+//   const htmlElem = document.createElement("h1")
+//   htmlElem.innerText = someText
 
-  mainSct.appendChild(imgElem)
-}
-imgBtn.addEventListener("click", addImage)
+//   mainSct.appendChild(htmlElem)
+// }
 
-textBtn.addEventListener("click", addSomeText)
+// const addImage = () => {
+//   const imgURL = "https://upload.wikimedia.org/wikipedia/commons/4/4a/100x100_logo.png"
+//   const imgElem = document.createElement("img")
+//   imgElem.src = imgURL
+//   imgElem.alt = "circle logo"
 
-colorBtn.addEventListener("click", () => {
-  let red = Math.random()*255
-  let blue = Math.random()*255
-  let green = Math.random()*255
-  console.log(blue)
+//   mainSct.appendChild(imgElem)
+// }
+// imgBtn.addEventListener("click", addImage)
 
-  mainSct.style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")"
-})
+// textBtn.addEventListener("click", addSomeText)
+
+// colorBtn.addEventListener("click", () => {
+//   let red = Math.random()*255
+//   let blue = Math.random()*255
+//   let green = Math.random()*255
+//   console.log(blue)
+
+//   mainSct.style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")"
+// })
