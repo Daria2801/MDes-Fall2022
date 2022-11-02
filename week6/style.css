@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  max-width: 20%;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Inter", sans-serif;
+}
