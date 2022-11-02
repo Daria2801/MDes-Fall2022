@@ -1,41 +1,46 @@
-let radius;
-let angle = 0;
-const speed = 0.1;
-let PosX, PosY;
-let speedMultiX;
-let speedMultiY;
-let direction = 1;
+const system = {
+  radius: 0,
+  x: 0,
+  y: 0,
+  angle: 0,
+  speed: 0.1,
+  posX: 0,
+  posY: 0,
+  multiplier: 0,
+  direction: 1,
+  reverse() {
+    this.direction = this.direction * -1;
+  },
+};
 
 function setup() {
   createCanvas(400, 400);
-  radius = width / 5;
-  PosX = width / 2;
-  PosY = height / 2;
+
+  system.radius = width / 5;
+  system.posX = width / 2;
+  system.posY = height / 2;
 }
 
 function draw() {
   background(143, 193, 181);
-  translate(width / 2, height / 2);
-  speedMultiX = 1 - Math.abs(Math.min(mouseX, width) - PosX) / PosX;
-  speedMultiY = 1 - Math.abs(Math.min(mouseY, height) - PosY) / PosY;
+  translate(system.posX, system.posY);
 
-  // Empty Circle
+  system.multiplier =
+    (1 - Math.abs(Math.min(mouseX, width) - system.posX) / system.posX) *
+    (1 - Math.abs(Math.min(mouseY, height) - system.posY) / system.posY);
+
   noFill();
-  circle(0, 0, radius * 2 * speedMultiX * speedMultiY);
+  circle(0, 0, system.radius * 2);
 
-  // Rotating Circle
+  system.x = cos(system.angle) * system.radius;
+  system.y = sin(system.angle) * system.radius;
+
   fill(106, 143, 134);
-  let x = cos(angle) * radius;
-  let y = sin(angle) * radius;
-  circle(x, y, 15);
+  circle(system.x, system.y, 15);
 
-  // Increase angle every frame
-  angle += speed * speedMultiX * speedMultiY * direction;
-
-  //fill(29, 66, 58);
-  //square(startMove?angle*10:-10, -10, 55, 10);
+  system.angle += system.speed * system.multiplier * system.direction;
 }
 
 function mousePressed() {
-  direction = direction * -1;
+  system.reverse();
 }
