@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap"
       rel="stylesheet"
@@ -11,23 +13,31 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-
-    <style media="screen">
-      main {
-        height: 100vh;
-      }
-    </style>
-    <link rel="stylesheet" href="style.css" />
-
-    <title>Complex Interactions</title>
   </head>
-
   <body>
+    <main>
+      <h1>Interactive simulation</h1>
+      <p>
+        My idea was to make a rain that will help the "flower" to glow.<br />
+        The rain follows the mouse.<br />
+        As soon as it touches the circle ('flower') it starts frowing. When it's
+        full-it becomes green. <br />
+        When it's not raining, the flower becomes smaller.
+      </p>
+
+      <a href="https://editor.p5js.org/Daria2801/sketches/rxEIaum20"
+        >Final code</a
+      >
+    </main>
+
     <h1>Step 1</h1>
-    <p>Create a Canvas and a circle inside of it.</p>
+    <p>I started with the code of rain that I found online</p>
+    <a href="https://editor.p5js.org/kelsierose94/sketches/MU2Y21aG0"
+      >Rain code is here</a
+    >
 
     <header class="header">
-      <img src="images/step1.png" />
+      <img src="images/rain.png" />
     </header>
 
     <h1>Step 2</h1>
@@ -70,6 +80,8 @@
     </header>
 
     <script src="script.js"></script>
+    <script src="sketch.js"></script>
+
     <script src="sketch.js"></script>
   </body>
 </html>
